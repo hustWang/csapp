@@ -1,0 +1,13 @@
+1. 位运算的异或表示
+bis(int x,int m)  bic(int x,int m)
+参数m为掩码，对于bis，就是在m为1的每个位置，修改x的对应位为1，并返回修改后的值。同理，对bic，修改x的对应位为0后返回。
+
+x^y == bis(bic(x, y), bic(y, x))
+
+2. 位向量
+void inplace_swap(int *x, int *y){
+    *y = *x ^ *y;
+    *x = *x ^ *y;
+    *y = *x ^ *y;
+}
+当 *x 与 *y 相同时，*x ^ *y=0，此时 x 和 y 指向同一位置 0。
