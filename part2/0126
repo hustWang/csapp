@@ -2,7 +2,7 @@
 bis(int x,int m)  bic(int x,int m)
 参数m为掩码，对于bis，就是在m为1的每个位置，修改x的对应位为1，并返回修改后的值。同理，对bic，修改x的对应位为0后返回。
 
-x^y == bis(bic(x, y), bic(y, x))
+x^y == bis(bic(x, y), bic(y, x)) //两部分各得到一些x, y不同值的位，两部分互补构成完整的结果
 
 2. 位向量
 void inplace_swap(int *x, int *y){
